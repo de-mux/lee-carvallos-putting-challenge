@@ -46,7 +46,7 @@ running=true;
 if (document.getElementById('fskip')!=undefined) fskip=parseInt(document.getElementById('fskip').value);
 if (document.getElementById('opacity')!=undefined) bopacity=parseInt(document.getElementById('opacity').value);
 handle=requestInterval(frame,delay);
-status('Started');
+console.log('Started');
 cold=false;
 }
 
@@ -55,7 +55,7 @@ silence();
 if(!running)return;
 running=false;
 clearRequestInterval(handle);
-status('Stopped');
+console.log('Stopped');
 }
 
 function frame(){
@@ -81,7 +81,7 @@ keyStates[keyc.row]=keyStates[0]=0xff;
 cevt=false;
 }
 if(fskip<1)fskip=5;
-if(cframe==0){stop();status('Crashed');}
+if(cframe==0){stop();console.log('Crashed');}
 if (tsw.isBrowserSupported) { psgA.envelope(); psgB.envelope(); psgC.envelope(); }
 working=false;
 }

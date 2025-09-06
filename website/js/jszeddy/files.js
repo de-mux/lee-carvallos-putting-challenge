@@ -55,7 +55,7 @@ function load_bas(buf) {
     var line='', s='';
     var ok=false;
     var err=0;
-    if (cold) {status('Start emulator first'); return;}
+    if (cold) {console.log('Start emulator first'); return;}
     for (var i=0; i<buf.length; i++) {
       if (buf[i]==10 || buf[i]==13) {
         if (ok) {
@@ -76,14 +76,14 @@ function load_bas(buf) {
       }
     }
     if (ok) { if (line[0]!='#') err = compile('0'+line+s); }
-    if (memory[0x4000]==0xff || memory[0x4000]==4) status('Done'); else status('Syntax error');
+    if (memory[0x4000]==0xff || memory[0x4000]==4) console.log('Done'); else console.log('Syntax error');
 }
 
 function load_txt(buf) {
     var lineno = 1;
     var lbuf=[0xea], ibuf=1;
     var ok=false;
-    if (cold) {status('Start emulator first'); return;}
+    if (cold) {console.log('Start emulator first'); return;}
     for (var i=0; i<buf.length; i++) {
       if (buf[i]==10 || buf[i]==13) {
         if (ok) {
@@ -103,7 +103,7 @@ function load_txt(buf) {
 function load_bin(buf) {
     var lbuf=[0xea], ibuf;
     if (prgptr == 0x4009) {
-      if (cold) {status('Start emulator first'); return;}
+      if (cold) {console.log('Start emulator first'); return;}
       ibuf = 1;
       for (var i=0; i<buf.length; i++) lbuf[ibuf++] = buf[i];
       enter_line(0,lbuf);
@@ -134,7 +134,7 @@ function load_bmp(buf) {
       if (i>196608) break;
     }
     ctxb.putImageData(id, 0, 0);
-    status('Background image loaded');
+    console.log('Background image loaded');
 }
 
 function getgdb(buf,ptr,blen)
@@ -204,7 +204,7 @@ function load_tzx(buf) {
 	  }
 	}
 	start(s);
-	status(s);
+	console.log(s);
 }
 
 function load_hex(buf,filnam) {
@@ -227,17 +227,17 @@ if(ext=='p'||ext=='81') {
 load_p(bv,name);
 arx=(name.indexOf('arx')>=0);
 save_n(name);
-status('File loaded');
+console.log('File loaded');
 }else if(ext=='o'||ext=='80') {
 load_o(bv,name);
 save_n(name);
-status('File loaded');
+console.log('File loaded');
 }else if(ext=='tzx'){
 load_tzx(bv);
 }else if(ext=='hex'){
 load_hex(bv,name);
 save_n(name);
-status('File loaded');
+console.log('File loaded');
 }else if(ext=='rom'||ext=='bin'||ext=='stc'){
 load_bin(bv);
 return 1;
@@ -276,7 +276,7 @@ for (var i=0; i<req.responseText.length; i++)
 bv[i] = req.responseText.charCodeAt(i);
 handle_file(filnam,bv);
 }else{
-status('GET failed');
+console.log('GET failed');
 }
 prgptr = 0x4009;
 }

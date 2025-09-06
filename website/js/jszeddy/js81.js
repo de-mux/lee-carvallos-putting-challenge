@@ -1,4 +1,4 @@
-function status(s){}
+// function status(s){}
 function show(){}
 
 function go(pfile){

@@ -231,14 +231,14 @@ function load_t(ptr) {
 	  } else {
             s = localStorage[name];
 	    if (!s) {
-	      status('Data not found: ' + name);
+	      console.log('Data not found: ' + name);
 	      return;
 	    }
 	  }
 	} else if (document.getElementById('cassette')!=undefined) {
 	  s = document.getElementById('cassette').value;
 	  if (s.length==0) {
-	    status('Data not found');
+	    console.log('Data not found');
 	    return;
 	  }
 	}
@@ -255,7 +255,7 @@ function load_t(ptr) {
 
         if (cptr>=s.length) cptr = 0;
 
-	status('Data loaded');
+	console.log('Data loaded');
 }
 
 function save_t(ptr) {
@@ -300,7 +300,7 @@ function save_n(name) {
 
         localStorage[name] = s;
 
-	status('Data saved');
+	console.log('Data saved');
 }
 
 function lprint(ptr)
@@ -412,7 +412,7 @@ function readport(addr) {
 //	  return zxregsA[zxregA]; // some games expect 0xff
 	} else if (a == 0x5f) {
 	  mtmode = addr >> 8;
-	  status('MT mode '+mtmode.toFixed());
+	  console.log('MT mode '+mtmode.toFixed());
 	} else if (a == 0xf5) {
 	  if (tsw.isBrowserSupported) {
 	    psgB.oscfreq(65535/(1+z80.e));
