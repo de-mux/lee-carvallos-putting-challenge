@@ -116,12 +116,17 @@
 
         <div class="d-flex flex-row mb-2">
           <div class="p-2">
-            <textarea id="printer" class="form-control" cols="48" rows="8" readonly=""></textarea>
+            <textarea id="printer" class="form-control" cols="32" rows="8" readonly=""></textarea>
           </div>
-          <div class="p-2 align-self-end">
-            <button class="btn btn-primary" type="button" onclick="document.getElementById('printer').value=''">
-              Clear
-            </button>
+          <div class="d-flex flex-column justify-content-between p-2 ms-3">
+            <div class="alert alert-info" role="alert">
+              <small class="text-muted">Text sent to the virtual printer will appear here.</small>
+            </div>
+            <div>
+              <button class="btn btn-primary" type="button" onclick="document.getElementById('printer').value=''">
+                Clear
+              </button>
+            </div>
           </div>
         </div>
 
@@ -140,8 +145,8 @@
         </p>
 
         <p>
-          Source code and more information can be found at
-          <a href="github.com/de-mux/lee-carvallos-putting-challenge">GitHub</a>.
+          Source code and more information can be found on
+          <a href="https://github.com/de-mux/lee-carvallos-putting-challenge">GitHub</a>.
         </p>
       </div>
     </div>
