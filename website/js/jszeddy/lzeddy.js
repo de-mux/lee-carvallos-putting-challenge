@@ -33,6 +33,7 @@ var lfout = 1;
 scnt = 0;
 prbuf = "";
 var cscheme = 0;
+var green_monitor = true;
 var zxregA = 0,
   zxregsA = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var psgA, psgB, psgC;
