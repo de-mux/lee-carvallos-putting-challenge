@@ -43,7 +43,7 @@ var arx = false;
 var bordercolor = "white";
 
 var zx2ascii =
-  ' __________"!$:?()><=+-*/;,.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  ' \xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa"!$:?()><=+-*/;,.0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 var ascii2zx = [
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -330,7 +330,17 @@ function lprint(ptr) {
   while (1) {
     c = memory[ptr];
     if (c == 0x76) break;
-    cc = zx2ascii[c & 0x3f];
+
+    if (c >= 0x80 && c <= 0xa5) {
+      // Specific to the ZX81 VDU font
+      cc = String.fromCharCode(0xb0 + (c - 0x80));
+    } else if (c >= 0xa6 && c <= 0xbf) {
+      // Specific to the ZX81 VDU font
+      cc = String.fromCharCode(0x61 + (c - 0xa6));
+    } else {
+      cc = zx2ascii[c & 0x3f];
+    }
+
     if (cc == " ") {
       scnt++;
     } else {
