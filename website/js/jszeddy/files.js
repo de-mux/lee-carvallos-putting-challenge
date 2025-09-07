@@ -295,17 +295,19 @@ function handle_file(name, bv) {
 
 function get_file(filnam) {
   var req = new XMLHttpRequest();
-  req.open("GET", filnam, false);
+  req.open("GET", filnam, true);
   if (req.overrideMimeType)
     req.overrideMimeType("text/plain;charset=x-user-defined");
+  req.onload = function() {
+    if (req.status == 200 || req.status == 0) {
+      var bv = new Uint8Array(req.responseText.length);
+      for (var i = 0; i < req.responseText.length; i++)
+        bv[i] = req.responseText.charCodeAt(i);
+      handle_file(filnam, bv);
+    } else {
+      console.log("GET failed for " + filename);
+    }
+    prgptr = 0x4009;
+  };
   req.send(null);
-  if (req.status == 200 || req.status == 0) {
-    var bv = new Uint8Array(req.responseText.length);
-    for (var i = 0; i < req.responseText.length; i++)
-      bv[i] = req.responseText.charCodeAt(i);
-    handle_file(filnam, bv);
-  } else {
-    console.log("GET failed");
-  }
-  prgptr = 0x4009;
 }
