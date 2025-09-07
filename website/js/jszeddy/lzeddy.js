@@ -356,7 +356,7 @@ function lprint(ptr) {
 
 function zx81_init() {
   for (var i = 0x0000; i < 0x2000; i++) {
-    memory[i] = roms["zx81.rom"].charCodeAt(i) & 0xff;
+    memory[i] = roms["zx81.rom"][i];
   }
   memory[0x416] = memory[0x417] = memory[0x418] = 0;
   for (var i = 0x2000; i < 0x4000; i++) {
