@@ -147,9 +147,9 @@ function z80_do_opcodes()
 	for (var i=1; i<=8; i++) {
 	  px = (v & mask) ? pxi : pxp;
     if (green_monitor) {
-      imageDataData[ipxl++] = px * 0.4;
+      imageDataData[ipxl++] = px * 0.5;
       imageDataData[ipxl++] = px * 0.9;
-      imageDataData[ipxl++] = px * 0.4;
+      imageDataData[ipxl++] = px * 0.5;
     } else {
       imageDataData[ipxl++] = px;
       imageDataData[ipxl++] = px;
