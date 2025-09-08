@@ -42,31 +42,73 @@
 </head>
 
 <body>
-  <div class="container my-5">
-    <h1>Lee Carvallo's Putting Challenge</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
 
-    <div class="col-lg-8 px-0">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="/static/polybytes-avatar-256px.png" alt="PolyBytes logo" height="32"
+          class="d-inline-block align-text-center">
+        PolyBytes
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li> <a class="nav-link" href="#play">Play</a> </li>
+          <li> <a class="nav-link" href="#download">Info</a> </li>
+          <li class="nav-item col-6 col-lg-auto"> <a class="nav-link py-2 px-0 px-lg-2 nav-link py-2 px-0 px-lg-2"
+              href="https://github.com/de-mux/lee-carvallos-putting-challenge/" target="_blank" rel="noopener"> <svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 499.36" role="img" class="navbar-nav-svg"
+                height="16" width="16">
+                <title>GitHub</title>
+                <path fill="currentColor" fill-rule="evenodd"
+                  d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                </path>
+              </svg> <small class="d-lg-none ms-2">GitHub</small> </a> </li>
+        </ul>
+        <span class="navbar-text">
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-lg">
+    <div class="col-lg-10">
+      <div class="clearfix">
+        <h1>
+          Lee Carvallo's Putting Challenge
+          <div class="float-end">
+            <img src="/static/timex-sinclair-1000-logo.png" alt="Timex Sinclair 1000 Logo" style="max-height: 28px;">
+          </div>
+        </h1>
+      </div>
       <p>
         <a href="/static/lee-tape.png"><img src="/static/lee-tape.png" align="left" height="200" /></a>
 
+      <p class="lead">
         A golf game For ZX81 / Timex Sinclair 1000 computers with 16K RAM
-        expansion pack, originally created for the
+        expansion pack.
+      </p>
+      <p>Originally created for the
         <a href="https://vcfed.org/events/vintage-computer-festival-west/">
           Vintage Computer Festival West
         </a>
         in Mountain View, CA in 2025. Inspired by Lee Carvallo's Putting
         Challenge from The Simpsons.
+      </p>
 
-        <img width="1000" height="0" />
+      <img width="1000" height="0" />
       </p>
     </div>
 
     <hr />
 
-    <div>
+    <div id="play">
       <h2>Play online</h2>
       <script src="/js/jszeddy/z80/z80_full.js"></script>
       <script src="/js/jszeddy/z80/z80_ops_full.js"></script>
@@ -112,6 +154,7 @@
             go("/printer-test.P");
           };
         </script>
+
         <h3>Printer</h3>
 
         <div class="d-flex flex-row mb-2">
@@ -138,7 +181,7 @@
         <p>You may need to click on the applet to enable keyboard entry.</p>
       </div>
       <div>
-        <h2>Download, source code, and more info</h2>
+        <h2 id="download">Download, source code, and more info</h2>
         <p>
           To download the game, see the
           <a href="https://github.com/de-mux/lee-carvallos-putting-challenge/releases/latest">latest release</a>.
