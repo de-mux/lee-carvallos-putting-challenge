@@ -3,7 +3,7 @@ function show() { }
 
 function go(pfile) {
   var req = new XMLHttpRequest();
-  req.open("GET", "/js/jszeddy/rom/zx81.rom", true);
+  req.open("GET", "./js/jszeddy/rom/zx81.rom", true);
   req.responseType = "arraybuffer";
   req.onload = function() {
     if (req.status === 200) {

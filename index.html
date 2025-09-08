@@ -40,8 +40,8 @@
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
-        <img src="/static/polybytes-avatar-256px.png" alt="PolyBytes logo" height="32"
+      <a class="navbar-brand" href=".">
+        <img src="static/polybytes-avatar-256px.png" alt="PolyBytes logo" height="32"
           class="d-inline-block align-text-center">
         PolyBytes
       </a>
@@ -75,12 +75,12 @@
         <h1>
           Lee Carvallo's Putting Challenge
           <div class="float-end">
-            <img src="/static/timex-sinclair-1000-logo.png" alt="Timex Sinclair 1000 Logo" style="max-height: 28px;">
+            <img src="static/timex-sinclair-1000-logo.png" alt="Timex Sinclair 1000 Logo" style="max-height: 28px;">
           </div>
         </h1>
       </div>
       <p>
-        <a href="/static/lee-tape.png"><img src="/static/lee-tape.png" align="left" height="200" /></a>
+        <a href="static/lee-tape.png"><img src="static/lee-tape.png" align="left" height="200" /></a>
 
       <p class="lead">
         A golf game For ZX81 / Timex Sinclair 1000 computers with 16K RAM
@@ -102,16 +102,16 @@
 
     <div id="play">
       <h2>Play online</h2>
-      <script src="/js/jszeddy/z80/z80_full.js"></script>
-      <script src="/js/jszeddy/z80/z80_ops_full.js"></script>
-      <script src="/js/jszeddy/rwmem_basic.js"></script>
-      <script src="/js/jszeddy/notsw.js"></script>
-      <script src="/js/jszeddy/timing.js"></script>
-      <script src="/js/jszeddy/utils.js"></script>
-      <script src="/js/jszeddy/keyboard.js"></script>
-      <script src="/js/jszeddy/files.js"></script>
-      <script src="/js/jszeddy/lzeddy.js"></script>
-      <script src="/js/jszeddy/js81.js"></script>
+      <script src="js/jszeddy/z80/z80_full.js"></script>
+      <script src="js/jszeddy/z80/z80_ops_full.js"></script>
+      <script src="js/jszeddy/rwmem_basic.js"></script>
+      <script src="js/jszeddy/notsw.js"></script>
+      <script src="js/jszeddy/timing.js"></script>
+      <script src="js/jszeddy/utils.js"></script>
+      <script src="js/jszeddy/keyboard.js"></script>
+      <script src="js/jszeddy/files.js"></script>
+      <script src="js/jszeddy/lzeddy.js"></script>
+      <script src="js/jszeddy/js81.js"></script>
 
       <div class="tv card bg-light border border-secondary rounded-3 mb-3 p-3">
         <div class="d-flex justify-content-center">
@@ -144,7 +144,7 @@
         <script>
           onload = function () {
             document.getElementById("printer").value = "";
-            go("/lee-carvallo.P");
+            go("./lee-carvallo.P");
             // go("/printer-test.P");
           };
         </script>
