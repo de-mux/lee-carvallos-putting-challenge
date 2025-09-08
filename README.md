@@ -1,7 +1,6 @@
-# <img src="./images/timex-sinclair-1000-logo.png" align="right" height="32" /> Lee Carvallo's Putting Challenge
+# <img src="./website/static/timex-sinclair-1000-logo.png" align="right" height="32" /> Lee Carvallo's Putting Challenge
 
 [<img src="./website/static/lee-tape.png" align="left" height="200" />](./website/static/lee-tape.png)
-
 A golf game For ZX81 / Timex Sinclair 1000 computers with 16K RAM expansion
 pack, originally created for the
 [Vintage Computer Festival West](https://vcfed.org/events/vintage-computer-festival-west/)
