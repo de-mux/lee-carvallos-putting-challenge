@@ -129,6 +129,9 @@ This will generate two files:
 make CFLAGS+=-DNOPRINTOUT
 ```
 
-## License
+## Licenses and attributions
 
 [BSD 3-Clause License](./LICENSE)
+
+"ZX81 VDU" font used on the website copyright 2010 by soxhead2000,
+[CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
