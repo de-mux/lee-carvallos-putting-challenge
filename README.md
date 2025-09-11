@@ -9,7 +9,11 @@ in Mountain View, CA in 2025.
 
 Inspired by Lee Carvallo's Putting Challenge from The Simpsons.
 
-<img width="1000" height="0">
+<img width="1000" height="0" />
+
+<a href="https://de-mux.github.io/lee-carvallos-putting-challenge/" target="_blank">
+  <img src="https://img.shields.io/badge/Play_Online!-%23FFDE90?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMDAnIGhlaWdodD0nMjAwJyB2aWV3Qm94PScwIDAgMjQgMjQnPjxwYXRoIGZpbGw9JyNjOTQ5NGInIGQ9J00yMS40MDkgOS4zNTNhMi45OTggMi45OTggMCAwIDEgMCA1LjI5NEw4LjU5NyAyMS42MTRDNi41MzQgMjIuNzM2IDQgMjEuMjc2IDQgMTguOTY4VjUuMDMzYzAtMi4zMSAyLjUzNC0zLjc2OSA0LjU5Ny0yLjY0OGwxMi44MTIgNi45NjhaJz48L3BhdGg+PC9zdmc+" />
+</a>
 
 ## Game features
 
@@ -25,7 +29,7 @@ Inspired by Lee Carvallo's Putting Challenge from The Simpsons.
 [<img src="./images/lee-screenshot-1.png" height="200" />](./images/lee-screenshot-1.png)
 [<img src="./images/lee-screenshot-2.png" height="200" />](./images/lee-screenshot-2.png)
 
-<hr>
+<hr />
 
 [<img src="./images/ball-hole.png" width="200" />](./images/ball-hole.png)
 
